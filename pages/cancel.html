@@ -1,15 +1,44 @@
-<!DOCTYPE html>
-<html lang="en-GB">
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Payment Cancelled | LearnTech UK</title>
-  <link rel="stylesheet" href="../styles/styles.css" />
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Payment Cancelled — Educomp</title>
+  <link rel="stylesheet" href="../styles/styles.css">
 </head>
 <body>
-  <main class="cancel">
-    <h1>Payment Cancelled</h1>
-    <p>Your enrolment was not completed. You can return to the course catalogue to try again.</p>
-    <a href="../pages/product.html" class="cta-btn">Back to Courses</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="../">⚡Educomp</a>
+      <nav>
+        <a href="../" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="cart.html" class="nav-link cart-link">Cart</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" style="text-align:center;padding:80px 24px">
+    <div style="font-size:4rem;margin-bottom:24px">❌</div>
+    <h1 style="margin-bottom:16px">Payment Cancelled</h1>
+    <p style="font-size:1.2rem;color:var(--muted);max-width:600px;margin:0 auto 32px">
+      Your payment was cancelled. No charges were made. Your cart items are still saved.
+    </p>
+    
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+      <a class="btn large" href="cart.html">Back to Cart</a>
+      <a class="btn secondary large" href="../">Continue Shopping</a>
+    </div>
   </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Educomp - premium online education</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
