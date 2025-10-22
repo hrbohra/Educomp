@@ -9,50 +9,63 @@
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="logo" href="../">⚡Educomp</a>
+      <a class="logo" href="../">⚡ Educomp</a>
       <nav>
         <a href="../" class="nav-link">Home</a>
         <a href="about.html" class="nav-link">About</a>
-        <a href="cart.html" class="nav-link cart-link">Cart</a>
+        <a href="cart.html" class="nav-link cart-link">Cart (<span id="cart-count">0</span>)</a>
       </nav>
     </div>
   </header>
 
   <main class="container" style="text-align:center;padding:80px 24px">
     <div style="font-size:4rem;margin-bottom:24px">✅</div>
-    <h1 style="color:var(--accent);margin-bottom:16px">Order Successful!</h1>
+    <h1 style="color:var(--accent);margin-bottom:16px">Enrolment Successful!</h1>
     <p style="font-size:1.2rem;color:var(--muted);max-width:600px;margin:0 auto 32px">
-      Thank you for your order! Your payment was successful and we've received your order details.
+      Thank you for enrolling! Your payment was successful and you now have lifetime access to your courses.
     </p>
     
     <div style="background:var(--card);padding:32px;border-radius:12px;max-width:500px;margin:0 auto 32px;border:1px solid rgba(255,107,0,0.2)">
       <h3 style="margin:0 0 16px;color:var(--text)">What happens next?</h3>
       <ul style="list-style:none;padding:0;text-align:left">
         <li style="padding:12px 0;border-bottom:1px solid rgba(255,107,0,0.1)">
-          📧 You'll receive an order confirmation email shortly
+          📧 Check your email for course access details
         </li>
-            <li style="padding:12px 0">
+        <li style="padding:12px 0;border-bottom:1px solid rgba(255,107,0,0.1)">
+          🎓 Your courses are now available in your dashboard
+        </li>
+        <li style="padding:12px 0;border-bottom:1px solid rgba(255,107,0,0.1)">
+          💳 Receipt has been sent to your email
+        </li>
+        <li style="padding:12px 0">
           ✉️ Questions? Email us at hello@educomp.co.uk
         </li>
       </ul>
     </div>
 
-    <a class="btn primary large" href="../">Continue Shopping</a>
+    <a class="btn primary large" href="../">Browse More Courses</a>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <p>&copy; <span id="year"></span> Educomp — Premium Education </p>
+      <p>&copy; <span id="year"></span> Educomp — Premium Online Education</p>
     </div>
   </footer>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+    
     // Clear cart after successful payment
     try {
-      localStorage.removeItem('GearStrength_cart');
-      localStorage.setItem('GearStrength_cart_count', '0');
-    } catch(e) {}
+      localStorage.removeItem('Educomp_cart');
+      localStorage.setItem('Educomp_cart_count', '0');
+      
+      // Update cart count display
+      const cartCountEl = document.getElementById('cart-count');
+      if(cartCountEl) cartCountEl.textContent = '0';
+    } catch(e) {
+      console.error('Error clearing cart:', e);
+    }
   </script>
 </body>
 </html>

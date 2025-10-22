@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>GearStrength — Kevlar Infused Performance Gear</title>
-  <meta name="description" content="Premium Kevlar-infused motorcycle gear for riders who demand protection and style.">
+  <title>Educomp — Premium Online Tech Education</title>
+  <meta name="description" content="Learn AI, Python, web development from expert UK instructors. Study online at your own pace.">
   <link rel="stylesheet" href="styles/styles.css">
   <script src="https://js.stripe.com/v3/"></script>
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="logo" href="/">⚡Educomp</a>
+      <a class="logo" href="/">⚡ Educomp</a>
       <nav>
         <a href="/" class="nav-link">Home</a>
         <a href="pages/about.html" class="nav-link">About</a>
@@ -20,37 +20,39 @@
     </div>
   </header>
 
-<section class="hero">
-    <h2>Master the Skills Shaping Tomorrow</h2>
-    <p>Learn AI, Python, web development, and more — from expert UK instructors. Study online, at your own pace.</p>
-    <a href="pages/product.html" class="cta-btn">Browse Courses</a>
+  <section class="hero">
+    <div class="container">
+      <h2>Master the Skills Shaping Tomorrow</h2>
+      <p class="hero-tagline">Learn AI, Python, web development, and more — from expert UK instructors. Study online, at your own pace.</p>
+      <div class="hero-features">
+        <span class="feature">✓ Lifetime Access</span>
+        <span class="feature">✓ UK Certified Tutors</span>
+        <span class="feature">✓ Flexible Learning</span>
+      </div>
+    </div>
   </section>
 
-  <section class="courses-overview">
-    <h3>Popular Courses</h3>
-    <div id="product-list"></div>
+  <section class="container courses-overview">
+    <h3 style="text-align:center;font-size:2rem;margin-bottom:32px;color:var(--accent)">Popular Courses</h3>
+    <div id="product-list" class="products-grid"></div>
   </section>
 
-  <section class="benefits">
-    <h3>Why Learn with Us</h3>
-    <ul>
-      <li>Accredited UK tutors with real industry experience</li>
-      <li>Lifetime access to your courses</li>
-      <li>Flexible study — learn anywhere, anytime</li>
-      <li>Certification upon completion</li>
+  <section class="container benefits">
+    <h3 style="text-align:center;font-size:1.8rem;margin-bottom:24px;color:var(--text)">Why Learn with Educomp</h3>
+    <ul class="feature-list" style="max-width:700px;margin:0 auto">
+      <li><strong>Accredited UK tutors</strong> with real industry experience</li>
+      <li><strong>Lifetime access</strong> to your courses</li>
+      <li><strong>Flexible study</strong> — learn anywhere, anytime</li>
+      <li><strong>Certification</strong> upon completion</li>
     </ul>
   </section>
 
-  <footer>
-    <p>© 2025 LearnTech UK — Empowering the next generation of digital talent</p>
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Educomp — Empowering the next generation of digital talent</p>
+    </div>
   </footer>
 
-
-  <script src="scripts/products.js"></script>
   <script type="module" src="scripts/main.js"></script>
 </body>
 </html>
-
-
-
-

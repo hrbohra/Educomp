@@ -9,35 +9,32 @@
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="logo" href="../">⚡Educomp</a>
+      <a class="logo" href="../">⚡ Educomp</a>
       <nav>
         <a href="../" class="nav-link">Home</a>
         <a href="about.html" class="nav-link">About</a>
-        <a href="cart.html" class="nav-link cart-link">Cart</a>
+        <a href="cart.html" class="nav-link cart-link">Cart (<span id="cart-count">0</span>)</a>
       </nav>
     </div>
   </header>
 
   <main class="container about-page">
-    <h1>About LearnTech UK</h1>
-    <p>LearnTech UK was founded to make quality tech education accessible to everyone. Our mission is to help learners across the UK build real-world skills in Artificial Intelligence, programming, and data through affordable, flexible online courses.</p>
-    <p>Our tutors are experienced professionals from the UK tech industry, bringing practical knowledge to every lesson.</p>
-    <p>Whether you’re starting out or upskilling for a new career, our structured learning paths are designed to help you achieve your goals faster.</p>
-  </main>
-
-  <footer>
-    <p>© 2025 LearnTech UK</p>
-  </footer>
+    <h1>About Educomp</h1>
+    <p>Educomp was founded to make quality tech education accessible to everyone. Our mission is to help learners across the UK build real-world skills in Artificial Intelligence, programming, and data through affordable, flexible online courses.</p>
+    
+    <p>Our tutors are experienced professionals from the UK tech industry, bringing practical knowledge to every lesson. Whether you're starting out or upskilling for a new career, our structured learning paths are designed to help you achieve your goals faster.</p>
 
     <section class="contact">
       <h2>Get In Touch</h2>
-      <p>Questions about our products? We're here to help.</p>
-      <p>Email us at <a href="mailto:hello@Educomp.co.uk">hello@educomp.co.uk</a></p>
+      <p>Questions about our courses? We're here to help.</p>
+      <p>Email us at <a href="mailto:hello@educomp.co.uk" style="color:var(--accent)">hello@educomp.co.uk</a></p>
 
       <form id="contact-form" class="contact-form" action="#" onsubmit="event.preventDefault(); alert('Thanks for your message! We\'ll get back to you within 24 hours.')">
         <label>Name <input required name="name" /></label>
         <label>Email <input required type="email" name="email" /></label>
-        <label>Message <textarea required name="message" placeholder="Ask us about sizing, protection levels, or anything else..."></textarea></label>
+        <label>Message 
+          <textarea required name="message" placeholder="Ask us about courses, certification, or anything else..."></textarea>
+        </label>
         <button class="btn primary" type="submit">Send Message</button>
       </form>
     </section>
@@ -45,44 +42,22 @@
 
   <footer class="site-footer">
     <div class="container">
-      <p>&copy; <span id="year3"></span> ⚡Educomp — Premium Online Education</p>
+      <p>&copy; <span id="year"></span> Educomp — Premium Online Education</p>
     </div>
   </footer>
 
   <script>
-    document.getElementById('year3').textContent = new Date().getFullYear();
+    document.getElementById('year').textContent = new Date().getFullYear();
+    
+    // Update cart count
+    const cartCountEl = document.getElementById('cart-count');
+    if(cartCountEl) {
+      try {
+        const cart = JSON.parse(localStorage.getItem('Educomp_cart') || '[]');
+        const totalQty = cart.reduce((s,i)=>s+i.qty,0);
+        cartCountEl.textContent = totalQty;
+      } catch(e) {}
+    }
   </script>
-</body>
-</html>
-
-
-
-
-
-<!DOCTYPE html>
-<html lang="en-GB">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About | LearnTech UK</title>
-  <link rel="stylesheet" href="../styles/styles.css" />
-</head>
-<body>
-  <header>
-    <nav class="navbar">
-      <a href="../index.html" class="logo">LearnTech UK</a>
-    </nav>
-  </header>
-
-  <main class="about">
-    <h1>About LearnTech UK</h1>
-    <p>LearnTech UK was founded to make quality tech education accessible to everyone. Our mission is to help learners across the UK build real-world skills in Artificial Intelligence, programming, and data through affordable, flexible online courses.</p>
-    <p>Our tutors are experienced professionals from the UK tech industry, bringing practical knowledge to every lesson.</p>
-    <p>Whether you’re starting out or upskilling for a new career, our structured learning paths are designed to help you achieve your goals faster.</p>
-  </main>
-
-  <footer>
-    <p>© 2025 LearnTech UK</p>
-  </footer>
 </body>
 </html>

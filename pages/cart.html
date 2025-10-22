@@ -3,29 +3,29 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Cart — GearStrength</title>
+  <title>Cart — Educomp</title>
   <link rel="stylesheet" href="../styles/styles.css">
   <script src="https://js.stripe.com/v3/"></script>
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="logo" href="../">⚡ GearStrength</a>
+      <a class="logo" href="../">⚡ Educomp</a>
       <nav>
         <a href="../" class="nav-link">Home</a>
         <a href="about.html" class="nav-link">About</a>
-        <a href="cart.html" class="nav-link cart-link">Cart</a>
+        <a href="cart.html" class="nav-link cart-link">Cart (<span id="cart-count">0</span>)</a>
       </nav>
     </div>
   </header>
 
   <main class="container cart-page">
-    <h1>Your Cart</h1>
+    <h1 style="color:var(--accent);margin-bottom:32px">Your Cart</h1>
     <div id="cart-items" class="cart-items"></div>
 
     <div class="cart-summary">
       <p style="font-size:1.1rem;margin:0 0 8px">Total: <strong id="cart-total" style="font-size:1.8rem;color:var(--accent)">£0.00</strong></p>
-      <p class="note">Shipping calculated at checkout</p>
+      <p class="note">Secure checkout powered by Stripe</p>
       <div class="cart-actions">
         <button id="continue-shopping" class="btn secondary">Continue Shopping</button>
         <button id="checkout-btn" class="btn primary large">Proceed to Checkout</button>
@@ -35,7 +35,7 @@
 
   <footer class="site-footer">
     <div class="container">
-      <p>&copy; <span id="year2"></span> GearStrength — Premium Motorcycle Protection Gear</p>
+      <p>&copy; <span id="year2"></span> Educomp — Premium Online Education</p>
     </div>
   </footer>
 
